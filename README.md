@@ -23,7 +23,9 @@ Use Obsidian Setting `Options > Files and links > New link format = Absolute pat
 Install this into your project:
 
 ```bash
-npm --save install markdown-it-obsidian-images
+npm --save install github:timephy/markdown-it-obsidian-images
+# or
+npm --save install github:timephy/markdown-it-obsidian-images#COMMIT
 ```
 
 ...and *use* it:
