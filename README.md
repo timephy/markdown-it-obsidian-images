@@ -2,11 +2,15 @@
 
 Renders [Obsidian-style images](https://help.obsidian.md/How+to/Format+your+notes#Images) in [markdown-it](https://github.com/markdown-it/markdown-it).
 
-## Origin
+## Original
 
 The original unmodified code came from [NPM](https://www.npmjs.com/package/markdown-it-obsidian-images).
 
 But the repo behind it seems like it no longer exists. This is why I copied the code, made some changes, and publised it here.
+
+## Modifications
+
+- Also supports image sizes (like `![[files/image.png|500]]` or `![[files/image.png|250px]]`)
 
 ## Tips and Tricks
 
@@ -112,8 +116,8 @@ A transform applied to every page name.
 
 The default transform does the following things:
 
-* trim surrounding whitespace
-* [sanitize](https://github.com/parshap/node-sanitize-filename) the string
+- trim surrounding whitespace
+- [sanitize](https://github.com/parshap/node-sanitize-filename) the string
 
 #### Example
 
