@@ -1,0 +1,32 @@
+{
+    "name": "markdown-it-obsidian-images",
+    "version": "1.1.0",
+    "description": "Obsidian-compatible image syntax for the markdown-it parser",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/timephy/markdown-it-obsidian-images.git"
+    },
+    "keywords": [
+        "markdown-it-plugin",
+        "markdown-it",
+        "markdown",
+        "images",
+        "obsidian"
+    ],
+    "author": "Tim Guggenmos <tim.guggenmos@me.com> (https://tim.guggenmos.me)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/timephy/markdown-it-obsidian-images/issues"
+    },
+    "homepage": "https://github.com/timephy/markdown-it-obsidian-images#readme",
+    "devDependencies": {
+        "markdown-it": "^12.2.0"
+    },
+    "dependencies": {
+        "extend": "^3.0.2",
+        "markdown-it-regexp": "^0.4.0",
+        "sanitize-filename": "^1.6.3"
+    }
+}
