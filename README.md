@@ -6,7 +6,7 @@ Renders [Obsidian-style images](https://help.obsidian.md/How+to/Format+your+note
 
 The original unmodified code came from [NPM](https://www.npmjs.com/package/markdown-it-obsidian-images).
 
-But the repo behind it seems like it no longer exists. This is why I copied the code, made some changes, and publised it here.
+But the repo behind it seems like it no longer exists. This is why I copied the code, made some changes, and published it here.
 
 ## Modifications
 
