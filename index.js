@@ -38,12 +38,27 @@ module.exports = (options) => {
         /!\[\[([^|\]\n]+)(\|([^\]\n]+))?\]\]/,
         (match, utils) => {
             let width = ''
+            let alt = ''
             let pageName = ''
             let href = ''
             let htmlAttrs = []
             let htmlAttrsString = ''
             pageName = match[1]
-            width = match[3] || ''
+            // `![[file.png|afterBar]]`
+            afterBar = match[3] || ''
+
+            const afterBarParts = afterBar.split('|')
+            if (afterBarParts.length === 0) {
+                // nothing to do
+            } else if (afterBarParts.length === 1) {
+                alt = afterBarParts[0]
+                width = afterBarParts[0]
+            } else if (afterBarParts.length === 2) {
+                alt = afterBarParts[0]
+                width = afterBarParts[1]
+            } else {
+                throw "Image has more than two `|` characters"
+            }
 
             width = options.postProcessLabel(width)
             pageName = options.postProcessPageName(pageName)
@@ -64,6 +79,7 @@ module.exports = (options) => {
 
             htmlAttrs.push(`src="${href}"`)
             if (width) htmlAttrs.push(`width="${width}"`)
+            if (alt) htmlAttrs.push(`alt="${alt}"`)
             for (let attrName in options.htmlAttributes) {
                 const attrValue = options.htmlAttributes[attrName]
                 htmlAttrs.push(`${attrName}="${attrValue}"`)
