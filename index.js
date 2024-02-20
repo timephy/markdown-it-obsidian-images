@@ -52,9 +52,14 @@ module.exports = (options) => {
                 // nothing to do
             } else if (afterBarParts.length === 1) {
                 alt = afterBarParts[0]
-                width = afterBarParts[0]
+                if (!isNaN(afterBarParts[0].charAt(0))) {
+                    width = afterBarParts[0]
+                }
             } else if (afterBarParts.length === 2) {
                 alt = afterBarParts[0]
+                if (isNaN(afterBarParts[1].charAt(0))) {
+                    throw "Image has two `|` characters, but the third part is not a number. This is not allowed."
+                }
                 width = afterBarParts[1]
             } else {
                 throw "Image has more than two `|` characters"
