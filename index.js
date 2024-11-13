@@ -45,7 +45,7 @@ module.exports = (options) => {
             let htmlAttrsString = ''
             pageName = match[1]
             // `![[file.png|afterBar]]`
-            afterBar = match[3] || ''
+            let afterBar = match[3] || ''
 
             const afterBarParts = afterBar.split('|')
             if (afterBarParts.length === 0) {
